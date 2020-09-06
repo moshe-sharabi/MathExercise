@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Math Exercises</string>
+    <string name="startUpLogo">startUpLogo</string>
+    <string name="background_image">background image</string>
+    <string name="choose_options">בחר אחת מהאפשרויות</string>
+    <string name="rand_ques_btn">שאלות רנדומליות</string>
+    <string name="custom_ques_btn">מותאם אישית</string>
+    <string name="scores">ניקוד: </string>
+    <string name="score">ניקוד:</string>
+    <string name="choose_subjects">בחר נושאים:</string>
+    <string name="start">התחל</string>
+</resources>

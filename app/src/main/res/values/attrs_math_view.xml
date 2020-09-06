@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="MathView">
+        <attr name="text" format="string" />
+<!--        <attr name="exampleDimension" format="dimension" />-->
+        <attr name="text_color" format="string" />
+<!--        <attr name="exampleDrawable" format="color|reference" />-->
+    </declare-styleable>
+</resources>
