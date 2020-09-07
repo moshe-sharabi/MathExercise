@@ -1,2 +1,2 @@
 # MathExercise
-an app with simple (but not easy) math questions
+an android app with simple (but not easy) math questions
