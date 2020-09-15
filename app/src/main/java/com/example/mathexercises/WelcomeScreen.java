@@ -1,7 +1,5 @@
 package com.example.mathexercises;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
@@ -10,6 +8,11 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * welcome screen activity. in this activity the user choose which type of quiz to show up
+ */
 public class WelcomeScreen extends AppCompatActivity {
 
     @Override
@@ -19,11 +22,19 @@ public class WelcomeScreen extends AppCompatActivity {
         resetButtonsColors();
     }
 
+    /**
+     * make sure the buttons not modified - resetting them
+     */
     private void resetButtonsColors() {
         ((GradientDrawable) findViewById(R.id.rand_button).getBackground()).setColor(Color.parseColor("#FFDD88"));
         ((GradientDrawable) findViewById(R.id.custom_button).getBackground()).setColor(Color.parseColor("#FFDD88"));
     }
 
+    /**
+     * in case the user chosen is random questions (not subject filtered)
+     *
+     * @param view random btn
+     */
     public void goToRandom(View view) {
         Intent intent = new Intent(this, QuestionActivity.class);
         startActivity(intent);
@@ -31,6 +42,11 @@ public class WelcomeScreen extends AppCompatActivity {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
+    /**
+     * in case the user chosen is custom questions (subject filtered)
+     *
+     * @param view custom btn
+     */
     public void goToCustomizing(View view) {
         Intent intent = new Intent(this, Customizing_Questions.class);
         startActivity(intent);
@@ -40,6 +56,9 @@ public class WelcomeScreen extends AppCompatActivity {
 
     boolean backPressed = false;
 
+    /**
+     * overriding back btn action
+     */
     @Override
     public void onBackPressed() {
         if (backPressed) {
@@ -51,7 +70,7 @@ public class WelcomeScreen extends AppCompatActivity {
                 public void run() {
                     backPressed = false;
                 }
-            }, 3500);
+            }, 3500);  //if the user don't click the second time in that delay period the backPressed state reset.
             Toast.makeText(WelcomeScreen.this, "לחץ שוב על מנת לצאת", Toast.LENGTH_SHORT).show();
         }
     }

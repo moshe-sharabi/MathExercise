@@ -12,6 +12,12 @@ import android.webkit.WebViewClient;
 
 import java.io.File;
 
+/**
+ * a class represents MathView
+ * modified from Nishant-Pathak on github
+ * original model: github.com/Nishant-Pathak/MathView
+ */
+
 public final class MathView extends WebView {
     private String text, color;
     private static final String TAG = MathView.class.getSimpleName();
