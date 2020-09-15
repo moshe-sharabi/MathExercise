@@ -2,6 +2,9 @@ package com.example.mathexercises;
 import android.content.Context;
 import android.media.MediaPlayer;
 
+/**
+ * a class represents media player (with no gui) in android
+ */
 public class AudioPlayer {
 
     private MediaPlayer mMediaPlayer;
